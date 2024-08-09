@@ -17,18 +17,28 @@ export default function Projects() {
     demo: "https://username.github.io/portfolio"
   });
 
+  const [projectclassname, setProjectClassname] = useState("w-full max-w-xl  p-5 grid gap-6 hidden md:block");
   function changeProject(proj){
     setProjectInfo(proj);
+    setProjectClassname("w-full p-5 h-screen gap-6 block fixed top-0 left-0 z-2000 bg-white md:block");
+
+    // Disable scrolling
+    document.body.style.overflow = 'hidden'; 
+  // Get the menubar element by its id
+  const menubar = document.getElementById("menubar");
+
+  // Hide the menubar
+  menubar.style.display = "none";
   }
   
 
 
   return (
 
-  <div id="Projects" style={{height: "100svh"}} className="flex justify-center items-center gap-36 bg-sky-900">
+  <div id="Projects"  className="flex justify-center items-center h-screen md:gap-36 bg-sky-900">
     
     {/** Projects Accordion */}
-    <div className=" flex flex-col justify-around w-1/5 h-2/5">
+    <div className=" flex flex-col justify-around w-full mx-5 md:mx-0 md:w-1/5 md:h-2/5">
     {
           projectTypes.map((projectType, projectIndex) => (
             <Accordion key={projectIndex} type="single" collapsible className=" bg-white rounded-t-lg px-2 my-2">
@@ -59,7 +69,7 @@ export default function Projects() {
     </div>
 
     {/** Project Info*/}
-    <CardProject projectTitle = {projectInfo.title} projectDescription = {projectInfo.description} projectImage = {projectInfo.image} projectTechnologies= {projectInfo.technologies} projectGithub = {projectInfo.github} projectDemo = {projectInfo.demo} />
+    <CardProject projectTitle = {projectInfo.title} projectDescription = {projectInfo.description} projectImage = {projectInfo.image} projectTechnologies= {projectInfo.technologies} projectGithub = {projectInfo.github} projectDemo = {projectInfo.demo} class={projectclassname} setClass={setProjectClassname}  />
    
   </div>
 

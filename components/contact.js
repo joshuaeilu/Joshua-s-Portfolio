@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button"
 
 export default function Contacts() {
   return (
-    <div id="Contact" className="flex items-center justify-center h-screen bg-sky-900">
+    <div id="Contact" className="flex items-center justify-center py-36 px-3  bg-sky-900">
+      
       <Card>
         <CardContent className="m-5" >
           <div className="space-y-8">

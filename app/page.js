@@ -13,6 +13,7 @@ export default function Home() {
       </Head>
       <div  className='overflow-hidden'>
       <HomePage />
+      
       </div>
     </div>
 

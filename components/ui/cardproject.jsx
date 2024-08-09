@@ -1,11 +1,28 @@
 
 import {Card} from '@/components/ui/card';
 import Link from "next/link";
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 
 export default function CardProject(props) {
+
+
+function closeProject(){
+
+    // Enable scrolling
+    document.body.style.overflow = 'auto'; 
+    // Get the menubar element by its id
+    const menubar = document.getElementById("menubar");
+
+    // Show the menubar
+    menubar.style.display = "flex ";
+    
+  props.setClass("w-full max-w-xl  p-5 grid gap-6 hidden md:block");
+}
+
   return (
-    <Card className="w-full max-w-xl h-3/5 p-6 grid gap-6">
+    <Card className={props.class}>
+<Button className="mb-3 md:hidden bg-sky-600" onClick={closeProject}>Close</Button>
       <div className="relative overflow-hidden rounded-lg">
         <img
           src={props.projectImage}
@@ -13,7 +30,7 @@ export default function CardProject(props) {
           height="100%"
           alt="Project Thumbnail"
           className="object-cover aspect-[4/3]"
-        />
+                 />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         <div className="absolute bottom-4 left-4 text-white">
           <h3 className="text-lg font-semibold">{props.projectTitle}</h3>
@@ -31,7 +48,7 @@ export default function CardProject(props) {
             {
               props.projectTechnologies.map((technology) => (
                 <div className="bg-muted px-3 py-1 rounded-full text-xs font-medium text-muted-foreground">{technology}</div>
-
+                
               ))
             }
             
@@ -63,10 +80,10 @@ export default function CardProject(props) {
 function GithubIcon(props) {
   return (
     <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+    {...props}
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"

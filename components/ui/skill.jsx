@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 export default function Skill() {
   return (
     <div><Card className="">
-    <CardContent className="grid grid-cols-[80px_1fr] gap-4  p-6">
+    <CardContent className="grid grid-cols-[40px_1fr] gap-4  p-6">
       <div className="bg-muted rounded-md flex items-center justify-center aspect-square">
         <CodeIcon className="w-8 h-8 text-muted-foreground" />
       </div>

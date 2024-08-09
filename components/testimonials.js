@@ -15,7 +15,7 @@ import Autoplay from "embla-carousel-react"
 
 export default function Testimonials() {
   return (
-    <div id="Testimonials" style={{height:"100svh"}} className="flex justify-center bg-sky-900 items-center">
+    <div id="Testimonials"  className="flex justify-center pt-56 md:pt-96 p-5  bg-sky-900 items-center">
         <Carousel
        
         opts={{

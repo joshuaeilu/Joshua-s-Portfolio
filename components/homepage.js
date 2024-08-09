@@ -74,7 +74,7 @@ export default function HomePage() {
                         ></div>
                     </div>
 
-                    <div className={`${activeSection === '' ? 'hidden': ''} flex items-center justify-center m-5`}>
+                    <div id='menubar' className={`${activeSection === '' ? 'hidden': ''} flex items-center justify-center m-5`}>
                    
                         <ul ref={menubarRef} className='bg-white flex text-lg rounded-lg p-2'>
                             {navElements.map((element, index) => (
@@ -104,7 +104,6 @@ return (
                             key={index}
                             id={element}
                             ref={(el) => sectionRefs.current[index] = el}
-                            className="h-screen"
                         >
                             <Component />
                         </section>
