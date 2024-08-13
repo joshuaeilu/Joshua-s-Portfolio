@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
+.fixed-top {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem; /* Adds padding */
+    border-radius: 0px 0px 50% 50%;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.nav-active {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Adjust the background color or add other styles for the active state */
+}
