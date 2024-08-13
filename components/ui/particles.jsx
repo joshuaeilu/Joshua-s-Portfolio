@@ -4,9 +4,9 @@ import MousePosition from "../../utils/mouse-position"
 
 export default function Particles({
   className = "",
-  quantity = 30,
-  staticity = 50,
-  ease = 50
+  quantity = 50,
+  staticity = 70,
+  ease = 30
 }) {
   const canvasRef = useRef(null)
   const canvasContainerRef = useRef(null)

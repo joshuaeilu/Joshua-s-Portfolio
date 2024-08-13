@@ -8,27 +8,30 @@ import Link from "next/link"
 
 export default function Projects() {
 
+  const projectOne = projects["Web Development"].examples[0];
   const [projectInfo, setProjectInfo] = useState({
-    title: "Personal Portfolio",
-    description: "A personal portfolio website to showcase my projects and skills.",
-    image: "path/to/portfolio-image.jpg",
-    technologies: ["HTML", "CSS", "JavaScript", "React"],
-    github: "https://github.com/username/portfolio",
-    demo: "https://username.github.io/portfolio"
+    title: projectOne.title,
+    description: projectOne.description,
+    image: projectOne.image,
+    technologies: projectOne.technologies,
+    github: projectOne.github,
+    demo: projectOne.demo
   });
 
   const [projectclassname, setProjectClassname] = useState("w-full max-w-xl  p-5 grid gap-6 hidden md:block");
   function changeProject(proj){
     setProjectInfo(proj);
+  if (window.innerWidth < 768) {
     setProjectClassname("w-full p-5 h-screen gap-6 block fixed top-0 left-0 z-2000 bg-white md:block");
 
     // Disable scrolling
     document.body.style.overflow = 'hidden'; 
-  // Get the menubar element by its id
-  const menubar = document.getElementById("menubar");
+    // Get the menubar element by its id
+    const menubar = document.getElementById("menubar");
 
-  // Hide the menubar
-  menubar.style.display = "none";
+    // Hide the menubar
+    menubar.style.display = "none";
+  }
   }
   
 

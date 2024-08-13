@@ -33,12 +33,12 @@ function closeProject(){
                  />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         <div className="absolute bottom-4 left-4 text-white">
-          <h3 className="text-lg font-semibold">{props.projectTitle}</h3>
+          <h3 className="text-xl font-semibold">{props.projectTitle}</h3>
         </div>
       </div>
       <div className="grid gap-4">
         <div>
-          <p className="text-base">
+          <p className="text-base py-3 ">
             {props.projectDescription}
           </p>
         </div>
@@ -47,7 +47,7 @@ function closeProject(){
           <div className="flex flex-wrap gap-2 mt-2">
             {
               props.projectTechnologies.map((technology) => (
-                <div className="bg-muted px-3 py-1 rounded-full text-xs font-medium text-muted-foreground">{technology}</div>
+                <div className="bg-sky-600 text-white px-3 py-1 rounded-full text-xs font-medium text-muted-foreground">{technology}</div>
                 
               ))
             }

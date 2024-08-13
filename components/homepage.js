@@ -10,7 +10,6 @@ import Skills from './skills';
 import Contacts from './contact';
 import Testimonials from './testimonials';
 import Projects from './projects';
-import Link from 'next/link';
 export default function HomePage() {
     const menubarRef = useRef(null);
     const sectionRefs = useRef([]);
@@ -26,7 +25,7 @@ export default function HomePage() {
                 } else {
                     menubarRef.current.classList.remove('fixed-top');
                 }
-                if(window.scrollY === 0){
+                if(window.scrollY <= 50){
                     setActiveSection('');
                 }
             }
